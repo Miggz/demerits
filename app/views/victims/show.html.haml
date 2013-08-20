@@ -1,0 +1,22 @@
+%p#notice= notice
+
+
+%dl
+  %dt
+    Name:
+  %dd
+    = @victim.name
+
+  %dt
+    Email:
+  %dd
+    = @victim.email
+  %dt
+    Current Demerit Count:
+  %dd
+    = @demerits
+%button
+  = '-1'
+%button
+  = '+1'
+
