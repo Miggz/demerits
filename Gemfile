@@ -36,6 +36,10 @@ gem 'zurb-foundation'
 gem 'haml-rails'
 gem 'acts_as_votable'
 
+# Authentication
+gem 'authlogic'
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

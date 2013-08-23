@@ -1,7 +1,9 @@
 Demerits::Application.routes.draw do
   resources :users
 
-  resources :victims
+  resources :victims do
+    resource :vote, module: 'acts_as_votable'
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
