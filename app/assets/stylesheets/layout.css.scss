@@ -1,0 +1,83 @@
+@import "globals";
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height:100%
+}
+
+.demerit-target {
+  height: 300px;
+  width: 300px;
+  border-radius: 100%;
+  border: solid 20px rgba(255,255,255,.4);
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.target-overlay {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  cursor: pointer;
+  background-size: contain;
+  border-radius: 100%;
+  @include no-touching();
+
+  > img {
+    opacity: 0;
+    @include single-transition(all, $speed:300ms, $ease:ease-out);
+    @include vendor-prefix(transition-delay, 75ms);
+    @include no-touching();
+  }
+
+  &:hover {
+    background: rgba($secondary-color, .5);
+    > img {
+      opacity: .5;
+    }
+  }
+
+  &:active {
+    opacity: .85;
+    background: rgba($secondary-color, .8);
+  }
+}
+
+.target-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.footer {
+  position: absolute;
+  right: 0; bottom: 0; left: 0;
+  padding: 0;
+}
+
+.demerit-count-heading {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.demerit-count {
+  text-align: center;
+  font-size: 36px;
+  line-height: 40px;
+  height: 40px;
+  overflow: hidden;
+}
+
+.large-heading {
+  font-size: 30px;
+  line-height: 36px;
+  color: rgba(#fff, .95);
+}
+
+.header-row {
+  padding-top: 15px;
+}

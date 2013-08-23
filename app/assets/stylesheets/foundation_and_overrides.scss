@@ -50,11 +50,10 @@ $em-base: 16 !default;
 // Various global styles
 
 $default-float: left;
-
-// $body-bg: #fff;
-// $body-font-color: #222;
-// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-// $body-font-weight: normal;
+$body-bg: #00aeef;
+$body-font-color: #fff;
+$body-font-family: 'Open Sans', sans-serif;
+$body-font-weight: 300;
 // $body-font-style: normal;
 
 // Font-smoothing
@@ -67,8 +66,8 @@ $default-float: left;
 
 // Colors
 
-// $primary-color: #2ba6cb;
-// $secondary-color: #e9e9e9;
+$primary-color: #fff;
+$secondary-color: #ff5110;
 // $alert-color: #c60f13;
 // $success-color: #5da423;
 
@@ -160,8 +159,8 @@ $default-float: left;
 
 // Control header font styles
 
-// $header-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-// $header-font-weight: bold;
+$header-font-family: 'Open Sans', sans-serif;
+$header-font-weight: 600;
 // $header-font-style: normal;
 // $header-font-color: #222;
 // $header-line-height: 1.4;
@@ -182,7 +181,7 @@ $default-float: left;
 
 // $subheader-line-height: 1.4;
 // $subheader-font-color: lighten($header-font-color, 30%);
-// $subheader-font-weight: 300;
+$subheader-font-weight: 300;
 // $subheader-top-margin: .2em;
 // $subheader-bottom-margin: .5em;
 
@@ -194,7 +193,7 @@ $default-float: left;
 // Style paragraphs
 
 // $paragraph-font-family: inherit;
-// $paragraph-font-weight: normal;
+$paragraph-font-weight: 300;
 // $paragraph-font-size: 1em;
 // $paragraph-line-height: 1.6;
 // $paragraph-margin-bottom: emCalc(20);
@@ -207,7 +206,7 @@ $default-float: left;
 
 // $code-color: darken($alert-color, 15%);
 // $code-font-family: Consolas, 'Liberation Mono', Courier, monospace;
-// $code-font-weight: bold;
+$code-font-weight: 600;
 
 // Style anchors
 
@@ -257,19 +256,19 @@ $default-float: left;
 
 // Control full name font styles
 
-// $microformat-fullname-font-weight: bold;
+$microformat-fullname-font-weight: 600;
 // $microformat-fullname-font-size: emCalc(15);
 
 // Control the summary font styles
 
-// $microformat-summary-font-weight: bold;
+$microformat-summary-font-weight: 600;
 
 // Control abbr padding
 // $microformat-abbr-padding: emCalc(0, 1);
 
 // Control abbr font styles
 
-// $microformat-abbr-font-weight: bold;
+$microformat-abbr-font-weight: 600;
 // $microformat-abbr-font-decoration: none;
 
 //
@@ -284,7 +283,7 @@ $default-float: left;
 
 // $form-label-pointer: pointer;
 // $form-label-font-size: emCalc(14);
-// $form-label-font-weight: 500;
+$form-label-font-weight: 600;
 // $form-label-font-color: lighten(#000, 30%);
 // $form-label-bottom-margin: emCalc(3);
 // $input-font-family: inherit;
@@ -311,7 +310,7 @@ $default-float: left;
 // We use these to style the legends when you use them
 
 // $legend-bg: #fff;
-// $legend-font-weight: bold;
+$legend-font-weight: 600;
 // $legend-padding: emCalc(0, 3);
 
 // We use these to style the prefix and postfix input elements
@@ -329,7 +328,7 @@ $default-float: left;
 // $input-error-message-padding: emCalc(6, 4);
 // $input-error-message-top: 0;
 // $input-error-message-font-size: emCalc(12);
-// $input-error-message-font-weight: bold;
+$input-error-message-font-weight: 600;
 // $input-error-message-font-color: #fff;
 // $input-error-message-font-color-alt: #333;
 
@@ -363,7 +362,7 @@ $default-float: left;
 // $button-font-tny: emCalc(11);
 // $button-font-sml: emCalc(13);
 // $button-font-lrg: emCalc(20);
-// $button-font-weight: bold;
+$button-font-weight: 600;
 // $button-font-align: center;
 
 // We use these to control various hover effects.
@@ -485,7 +484,7 @@ $default-float: left;
 
 // We use these to control text style.
 
-// $alert-font-weight: bold;
+$alert-font-weight: 600;
 // $alert-font-size: emCalc(14);
 // $alert-font-color: #fff;
 // $alert-font-color-alt: darken($secondary-color, 60%);
@@ -787,7 +786,7 @@ $default-float: left;
 // We use these to style the label text
 
 // $label-font-sizing: emCalc(14);
-// $label-font-weight: bold;
+$label-font-weight: 600;
 // $label-font-color: #333;
 // $label-font-color-alt: #fff;
 
@@ -868,7 +867,7 @@ $default-float: left;
 
 // $pagination-link-current-background: $primary-color;
 // $pagination-link-current-font-color: #fff;
-// $pagination-link-current-font-weight: bold;
+$pagination-link-current-font-weight: 600;
 // $pagination-link-current-cursor: default;
 // $pagination-link-current-active-bg: $primary-color;
 
@@ -1076,7 +1075,7 @@ $default-float: left;
 // $side-nav-link-color: $primary-color;
 // $side-nav-link-color-active: lighten(#000, 30%);
 // $side-nav-font-size: emCalc(14);
-// $side-nav-font-weight: bold;
+$side-nav-font-weight: 600;
 
 // We use these to control border styles
 
@@ -1097,13 +1096,13 @@ $default-float: left;
 
 // $sub-nav-font-size: emCalc(14);
 // $sub-nav-font-color: #999;
-// $sub-nav-font-weight: normal;
+$sub-nav-font-weight: 300;
 // $sub-nav-text-decoration: none;
 // $sub-nav-border-radius: 1000px;
 
 // We use these to control the active item styles
 
-// $sub-nav-active-font-weight: bold;
+$sub-nav-active-font-weight: 600;
 // $sub-nav-active-bg: $primary-color;
 // $sub-nav-active-color: #fff;
 // $sub-nav-active-padding: emCalc(3, 9);
@@ -1172,7 +1171,7 @@ $default-float: left;
 // $table-head-bg: #f5f5f5;
 // $table-head-font-size: emCalc(14);
 // $table-head-font-color: #222;
-// $table-head-font-weight: bold;
+$table-head-font-weight: 600;
 // $table-head-padding: emCalc(8, 10, 10);
 
 // These control the row padding and font styles
@@ -1209,7 +1208,7 @@ $default-float: left;
 //
 
 // $has-tip-border-bottom: dotted 1px #ccc;
-// $has-tip-font-weight: bold;
+$has-tip-font-weight: 600;
 // $has-tip-font-color: #333;
 // $has-tip-border-bottom-hover: dotted 1px darken($primary-color, 20%);
 // $has-tip-font-color-hover: $primary-color;
@@ -1218,11 +1217,11 @@ $default-float: left;
 // $tooltip-padding: emCalc(8);
 // $tooltip-bg: #000;
 // $tooltip-font-size: emCalc(15);
-// $tooltip-font-weight: bold;
+$tooltip-font-weight: 600;
 // $tooltip-font-color: #fff;
 // $tooltip-line-height: 1.3;
 // $tooltip-close-font-size: emCalc(10);
-// $tooltip-close-font-weight: normal;
+$tooltip-close-font-weight: 300;
 // $tooltip-close-font-color: #888;
 // $tooltip-font-size-sml: emCalc(14);
 // $tooltip-radius: $global-radius;
@@ -1272,7 +1271,7 @@ $default-float: left;
 
 // $topbar-dropdown-label-color: #555;
 // $topbar-dropdown-label-text-transform: uppercase;
-// $topbar-dropdown-label-font-weight: bold;
+$topbar-dropdown-label-font-weight: 600;
 // $topbar-dropdown-label-font-size: emCalc(10);
 
 // Top menu icon styles
@@ -1299,6 +1298,7 @@ $default-float: left;
 // Sticky Class
 
 // $topbar-sticky-class: ".sticky";
+
 
 @import
 "foundation/components/global",
