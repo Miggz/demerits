@@ -9,10 +9,20 @@
   %head
     %meta{charset: "utf-8"}/
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %meta{ :name => 'apple-mobile-web-app-capable', :content => 'yes' }
+
     %title= content_for?(:title) ? yield(:title) : 'Untitled'
+
     = stylesheet_link_tag 'application'
+    :plain
+      <link rel="apple-touch-icon" href="/icons/touch-icon-iphone.png" />
+      <link rel="apple-touch-icon" sizes="72x72" href="/icons/touch-icon-ipad.png" />
+      <link rel="apple-touch-icon" sizes="114x114" href="/icons/touch-icon-iphone-retina.png" />
+      <link rel="apple-touch-icon" sizes="144x144" href="/icons/touch-icon-ipad-retina.png" />
+
     = javascript_include_tag 'lib/custom.modernizr'
-    = csrf_meta_tags
+git    = csrf_meta_tags
+
   %body{ ontouchstart: '' }
     .full-wrapper
       .row.header-row
@@ -22,6 +32,4 @@
           = image_tag 'menu.svg', height: 24, width: 24, class: 'right'
       .row
         = yield
-
-
     = javascript_include_tag 'application'
