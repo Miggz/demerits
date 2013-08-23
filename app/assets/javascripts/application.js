@@ -29,6 +29,10 @@
 //= require foundation/foundation.placeholder
 //= require foundation/foundation.abide
 //= require turbolinks
-//= require_tree .
+
+//= require lib/fast_click
+//= require layout
+
+// require_tree .
 
 $(function(){ $(document).foundation(); });

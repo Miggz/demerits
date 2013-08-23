@@ -11,10 +11,17 @@
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
     %title= content_for?(:title) ? yield(:title) : 'Untitled'
     = stylesheet_link_tag 'application'
-    = javascript_include_tag 'vendor/custom.modernizr'
+    = javascript_include_tag 'lib/custom.modernizr'
     = csrf_meta_tags
-  %body
-    .row
-      .large-12.columns
+  %body{ ontouchstart: '' }
+    .full-wrapper
+      .row.header-row
+        .small-9.columns
+          = yield :page_heading
+        .small-3.columns
+          = image_tag 'menu.svg', height: 24, width: 24, class: 'right'
+      .row
         = yield
+
+
     = javascript_include_tag 'application'

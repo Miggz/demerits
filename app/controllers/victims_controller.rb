@@ -10,9 +10,7 @@ class VictimsController < ApplicationController
   # GET /victims/1
   # GET /victims/1.json
   def show
-    @votes = Vote.where(victim_id: @victim)
-    @demerits = @votes.sum('value')
-
+    @victim = Victim.find params[:id]
   end
 
   # GET /victims/new

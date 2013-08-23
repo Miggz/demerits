@@ -1,22 +1,16 @@
-%p#notice= notice
+#notice= notice
 
+- content_for :page_heading do
+  .large-heading= @victim.name
 
-%dl
-  %dt
-    Name:
-  %dd
-    = @victim.name
-
-  %dt
-    Email:
-  %dd
-    = @victim.email
-  %dt
-    Current Demerit Count:
-  %dd
-    = @demerits
-%button
-  = '-1'
-%button
-  = '+1'
-
+.demerit-target.fastclick
+  .target-image{ style: "background-image: url('/harvey-moustache.jpg');" }
+  .target-overlay
+    = image_tag 'down-arrow.svg'
+.footer
+  .demerit-count-heading
+    = image_tag 'down-circle.svg', height: 16, width: 16
+    :plain
+      de<strong>MERIT Count:</strong>
+  .demerit-count
+    234
