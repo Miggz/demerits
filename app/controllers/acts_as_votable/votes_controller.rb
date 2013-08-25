@@ -1,19 +1,10 @@
 class ActsAsVotable::VotesController < ApplicationController
+  before_filter :set_user
   load_polymorphic_from_url :votable
-  
+
   # GET /votable/:votable_id/vote
   def show
     respond_to do |format|
-      format.html do
-        target_url = url_for(@votable)
-        if @user.present?
-          redirect_to target_url
-        else
-          store_location(target_url)
-          flash[:error] = t 'authlogic.require_user'
-          redirect_to login_url
-        end
-      end
       format.json { render :vote }
     end
   end
@@ -49,7 +40,6 @@ class ActsAsVotable::VotesController < ApplicationController
   def render_with_status
     success = yield
     status = success ? :ok : :forbidden
-    @message = I18n.t("votable.status.#{status}")
     render :vote, status: status
   end
 end

@@ -11,18 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130820230252) do
+ActiveRecord::Schema.define(version: 20130823140346) do
+
+  create_table "authentications", force: true do |t|
+    t.integer  "user_id"
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "authentications", ["user_id"], name: "index_authentications_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "name"
     t.string   "email"
+    t.string   "image"
+    t.string   "persistence_token", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "victims", force: true do |t|
     t.string   "name"
-    t.string   "email"
+    t.string   "image"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
