@@ -20,4 +20,6 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  authlogic:
+    require_user: 'You must be logged in to access this page'
+    require_no_user: 'You must be logged out to access this page'

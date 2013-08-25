@@ -29,3 +29,9 @@ Demerits::Application.configure do
   # number of complex assets.
   config.assets.debug = true
 end
+
+ENV['TWITTER_CONSUMER_KEY'] = 'fJEv6cxehA4wgtvAmrA9PA'
+ENV['TWITTER_CONSUMER_SECRET'] = 'pOLQINuK7eB9Y0YuMoIoO5lEuQI065c4pSYHjLqDO5M'
+
+ENV['FACEBOOK_KEY'] = '1408796806012693'
+ENV['FACEBOOK_SECRET'] = '346f8e9cd8b541a7a12eff7ef5f2fb93'

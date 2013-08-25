@@ -1,9 +1,18 @@
 Demerits::Application.routes.draw do
+  get '/auth/:provider/callback' => 'authentications#create'
+  get 'login' => 'authentications#index'
+
+  resources :authentications, only: %i[index create destroy]
   resources :users
 
-  resources :victims do
-    resource :vote, module: 'acts_as_votable'
+  concern :votable do
+    resource :vote, only: %i[show create update destroy],
+             module: 'acts_as_votable'
   end
+
+  resources :victims, concerns: :votable
+
+  root 'victims#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -45,7 +54,7 @@ Demerits::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'
