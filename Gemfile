@@ -49,6 +49,7 @@ end
 
 group :development, :test do
   gem 'jazz_hands'
+  gem 'rspec-rails'
 end
 
 # Use ActiveModel has_secure_password
