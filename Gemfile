@@ -39,6 +39,11 @@ gem 'acts_as_votable'
 # Authentication
 gem 'authlogic'
 
+group :development do
+  gem 'guard-livereload', require: false
+  gem 'rack-livereload'
+  gem 'rb-fsevent',       require: false
+end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
