@@ -10,6 +10,6 @@ class Authentication < ActiveRecord::Base
   end
 
   def dsl
-    raise 'This method should be overriden is subclass'
+    raise 'This method should be overriden in subclass'
   end
 end

@@ -22,5 +22,10 @@ module Demerits
 
     config.autoload_paths += %W(#{config.root}/lib
                                 #{config.root}/app/models/authentication)
+
+    config.generators do |g|
+      g.test_framework      :rspec, fixture: true
+      g.fixture_replacement :fabrication
+    end
   end
 end

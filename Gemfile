@@ -49,6 +49,10 @@ end
 
 group :development, :test do
   gem 'jazz_hands'
+  gem 'rspec-rails'
+  gem 'spork-rails', github: 'sporkrb/spork-rails'
+  gem 'database_cleaner'
+  gem 'fabrication'
 end
 
 # Use ActiveModel has_secure_password
