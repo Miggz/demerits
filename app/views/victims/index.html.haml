@@ -1,19 +1,20 @@
-%h1 Listing victims
+.large-8.columns
+  %h1 Listing victims
 
-%table
-  %tr
-    %th Name
-    %th
-    %th
-    %th
+  %table
+    %thead
+      %tr
+        %th Name
+        %th
+    %tbody
+      - @victims.each do |victim|
+        %tr
+          %td.victim-link
+            = link_to victim.name, victim
+          %td
+            = link_to 'Edit', edit_victim_path(victim)
+            |
+            = link_to 'Destroy', victim, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
-  - @victims.each do |victim|
-    %tr
-      %td= victim.name
-      %td= link_to 'Show', victim
-      %td= link_to 'Edit', edit_victim_path(victim)
-      %td= link_to 'Destroy', victim, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-%br
-
-= link_to 'New Victim', new_victim_path
+.large-4.columns
+  = link_to 'New Victim', new_victim_path
