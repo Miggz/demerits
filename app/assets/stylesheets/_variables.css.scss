@@ -1,2 +1,73 @@
+$base-font-size: 100% !default;
+$em-base: 16 !default;
+$experimental: true; // shows browser prefixes in ZURB
+
+// Various global styles
+// Global Styles
+// --------------------------------------------------
+$default-float: left;
+$body-bg: #00aeef;
+$body-font-color: #fff;
+$body-font-family: 'Open Sans', sans-serif;
+$body-font-weight: 300;
+
+// Colors
+// --------------------------------------------------
 $primary-color: #fff;
 $secondary-color: #ff5110;
+
+
+$header-font-family: 'Open Sans', sans-serif;
+$header-font-weight: 600;
+$subheader-font-weight: 300;
+$paragraph-font-weight: 300;
+$code-font-weight: 600;
+$microformat-fullname-font-weight: 600;
+$microformat-summary-font-weight: 600;
+$microformat-abbr-font-weight: 600;
+$form-label-font-weight: 600;
+$legend-font-weight: 600;
+$input-error-message-font-weight: 600;
+$button-font-weight: 600;
+$alert-font-weight: 600;
+
+$label-font-weight: 600;
+
+$pagination-link-current-font-weight: 600;
+
+$side-nav-font-weight: 600;
+$sub-nav-font-weight: 300;
+$sub-nav-active-font-weight: 600;
+$table-head-font-weight: 600;
+$has-tip-font-weight: 600;
+$tooltip-font-weight: 600;
+$tooltip-close-font-weight: 300;
+$topbar-dropdown-label-font-weight: 600;
+
+
+
+// Media Queries
+// --------------------------------------------------
+$tiny-width-screen-size: emCalc(320);
+$small-width-screen-size: emCalc(768);
+$medium-width-screen-size: emCalc(960);
+$large-width-screen-size: emCalc(1180);
+
+$tiny-height-screen-size: emCalc(320);
+$short-height-screen-size: emCalc(480);
+$avg-height-screen-size: emCalc(768);
+$tall-height-screen-size: emCalc(960);
+
+$screen-query:       "only screen";
+$tiny-width-query:   "(min-width: #{$tiny-width-screen-size})";
+$small-width-query:  "(min-width: #{$small-width-screen-size})";
+$medium-width-query: "(min-width: #{$medium-width-screen-size})";
+$large-width-query:  "(min-width: #{$large-width-screen-size})";
+
+$landscape-query:    "(orientation: landscape)";
+$portrait-query:     "(orientation: portrait)";
+
+$tiny-height-query:  "(min-height:"#{$tiny-height-screen-size}")";
+$small-height-query: "(min-height:"#{$short-height-screen-size}")";
+$medium-height-query:   "(min-height:"#{$avg-height-screen-size}")";
+$large-height-query:  "(min-height:"#{$tall-height-screen-size}")";
