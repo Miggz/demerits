@@ -4,7 +4,7 @@
   .large-heading= @victim.name
 
 .demerit-target.fastclick
-  .target-image{ style: "background-image: url('/harvey-moustache.jpg');" }
+  .target-image{ style: "background-image: url('#{ @victim.image }');" }
   .target-overlay
     = image_tag 'down-arrow.svg'
 .footer

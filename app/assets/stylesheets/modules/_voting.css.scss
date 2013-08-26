@@ -1,14 +1,4 @@
-@import "globals";
-
-html, body {
-  margin: 0;
-  padding: 0;
-  height:100%
-}
-
 .demerit-target {
-  height: 300px;
-  width: 300px;
   border-radius: 100%;
   border: solid 20px rgba(255,255,255,.4);
   overflow: hidden;
@@ -53,6 +43,29 @@ html, body {
   background-repeat: no-repeat;
 }
 
+.header-row {
+  padding-top: 15px;
+}
+
+.demerit-target {
+  @include demeritSize(160px);
+
+  @media #{$screen-query} and #{$tiny-width-query} and #{$tiny-height-query} {
+    @include demeritSize(240px);
+  }
+  @media #{$screen-query} and #{$tiny-width-query} and #{$small-height-query} {
+    @include demeritSize(300px);
+  }
+  @media #{$screen-query} and #{$small-width-query} and #{$medium-height-query} {
+    @include demeritSize(500px);
+  }
+  @media #{$screen-query} and #{$medium-width-query} and #{$large-height-query} {
+    @include demeritSize(700px);
+  }
+}
+
+
+
 .footer {
   position: absolute;
   right: 0; bottom: 0; left: 0;
@@ -66,18 +79,25 @@ html, body {
 
 .demerit-count {
   text-align: center;
-  font-size: 36px;
-  line-height: 40px;
-  height: 40px;
   overflow: hidden;
+  @include demeritCountSize(40px);
+
+  @media #{$screen-query} and #{$tiny-width-query} and #{$tiny-height-query} {
+    @include demeritCountSize(60px);
+  }
+  @media #{$screen-query} and #{$tiny-width-query} and #{$small-height-query} {
+    @include demeritCountSize(80px);
+  }
+  @media #{$screen-query} and #{$small-width-query} and #{$medium-height-query} {
+    @include demeritCountSize(100px);
+  }
+  @media #{$screen-query} and #{$medium-width-query} and #{$large-height-query} {
+    @include demeritCountSize(120px);
+  }
 }
 
 .large-heading {
   font-size: 30px;
   line-height: 36px;
   color: rgba(#fff, .95);
-}
-
-.header-row {
-  padding-top: 15px;
 }

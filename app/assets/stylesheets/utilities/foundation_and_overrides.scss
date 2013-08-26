@@ -112,17 +112,30 @@ $secondary-color: #ff5110;
 
 // Media Queries
 
-// $small-screen: 768px;
-// $medium-screen: 1280px;
-// $large-screen: 1440px;
+$small-screen: emCalc(768);
+$medium-screen: emCalc(1280);
+$large-screen: emCalc(1440);
 
-// $screen: "only screen";
-// $small: "only screen and (min-width: #{$small-screen})";
-// $medium: "only screen and (min-width: #{$medium-screen})";
-// $large: "only screen and (min-width: #{$large-screen})";
-// $landscape: "only screen and (orientation: landscape)";
-// $portrait: "only screen and (orientation: portrait)";
+$screen: "only screen";
+$small: "only screen and (min-width: #{$small-screen})";
+$medium: "only screen and (min-width: #{$medium-screen})";
+$large: "only screen and (min-width: #{$large-screen})";
+$landscape: "only screen and (orientation: landscape)";
+$portrait: "only screen and (orientation: portrait)";
 
+
+// Height Media Queries
+// --------------------------------------------------
+
+$tiny-height: emCalc(320);
+$short-height: emCalc(480);
+$avg-height: emCalc(768);
+$tall-height: emCalc(1000);
+
+$midget-break:      "only screen and (min-height:"#{$tiny-height}")";
+$short-break:      "only screen and (min-height:"#{$short-height}")";
+$avg-height-break: "only screen and (min-height:"#{$avg-height}")";
+$tall-break:       "only screen and (min-height:"#{$tall-height}")";
 //// Cursors
 
 //Custom use example -> $cursor-default-value: url(http://cursors-site.net/path/to/custom/cursor/default.cur),progress;
@@ -1300,39 +1313,4 @@ $topbar-dropdown-label-font-weight: 600;
 // $topbar-sticky-class: ".sticky";
 
 
-@import
-"foundation/components/global",
-"foundation/components/grid",
-"foundation/components/visibility",
-"foundation/components/block-grid",
-"foundation/components/type",
-"foundation/components/buttons",
-"foundation/components/forms",
-"foundation/components/button-groups",
-"foundation/components/dropdown-buttons",
-"foundation/components/split-buttons",
-"foundation/components/flex-video",
-"foundation/components/section",
-"foundation/components/top-bar",
-"foundation/components/orbit",
-"foundation/components/reveal",
-"foundation/components/joyride",
-"foundation/components/clearing",
-"foundation/components/alert-boxes",
-"foundation/components/breadcrumbs",
-"foundation/components/custom-forms",
-"foundation/components/keystrokes",
-"foundation/components/labels",
-"foundation/components/inline-lists",
-"foundation/components/pagination",
-"foundation/components/panels",
-"foundation/components/pricing-tables",
-"foundation/components/progress-bars",
-"foundation/components/side-nav",
-"foundation/components/sub-nav",
-"foundation/components/switch",
-"foundation/components/magellan",
-"foundation/components/tables",
-"foundation/components/thumbs",
-"foundation/components/tooltips",
-"foundation/components/dropdown";
+
