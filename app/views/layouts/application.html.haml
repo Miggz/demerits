@@ -24,12 +24,8 @@
     = csrf_meta_tags
 
   %body{ ontouchstart: '' }
-    .full-wrapper
-      .row.header-row
-        .small-9.columns
-          = yield :page_heading
-        .small-3.columns
-          = image_tag 'menu.svg', height: 24, width: 24, class: 'right'
-      .row
-        = yield
-    = javascript_include_tag 'application'
+    = render 'layouts/main_nav'
+
+    .row
+      = yield
+  = javascript_include_tag 'application'

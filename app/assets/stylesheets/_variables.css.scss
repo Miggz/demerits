@@ -18,6 +18,7 @@ $secondary-color: #ff5110;
 
 
 $header-font-family: 'Open Sans', sans-serif;
+$header-font-color: #fff;
 $header-font-weight: 600;
 $subheader-font-weight: 300;
 $paragraph-font-weight: 300;
@@ -45,6 +46,12 @@ $tooltip-close-font-weight: 300;
 $topbar-dropdown-label-font-weight: 600;
 
 
+$table-bg: transparent;
+$table-even-row-bg: rgba( #fff, .25 );
+$table-head-bg: rgba( #fff, .35 );
+$table-row-font-color: #fff;
+$table-head-font-color: #fff;
+
 
 // Media Queries
 // --------------------------------------------------
@@ -71,3 +78,87 @@ $tiny-height-query:  "(min-height:"#{$tiny-height-screen-size}")";
 $small-height-query: "(min-height:"#{$short-height-screen-size}")";
 $medium-height-query:   "(min-height:"#{$avg-height-screen-size}")";
 $large-height-query:  "(min-height:"#{$tall-height-screen-size}")";
+
+
+
+
+
+// Forms
+// --------------------------------------------------
+
+$input-bg-color:           rgba( #fff, .25 );
+$input-focus-bg-color:     rgba( #fff, .5 );
+$input-border-color:       rgba( #fff, .5 );
+$input-focus-border-color: rgba( #fff, .85);
+$input-font-size: emCalc(18);
+
+$form-label-pointer: pointer;
+$form-label-font-size: emCalc(14);
+$form-label-font-weight: 500;
+$form-label-font-color: lighten(#000, 30%);
+$form-label-bottom-margin: emCalc(3);
+$input-font-family: inherit;
+$input-font-color: rgba(0,0,0,0.75);
+
+
+
+
+$topbar-bg: rgba( #fff, .25 );
+$topbar-dropdown-bg: rgba( #fff, 0 );
+
+
+
+/* Background color for the top bar */
+
+
+/* Height and margin */
+$topbar-height: 45px;
+$topbar-margin-bottom: emCalc(30);
+
+/* Control Input height for top bar */
+$topbar-input-height: 2.45em;
+
+/* Controlling the styles for the title in the top bar */
+$topbar-title-weight: bold;
+$topbar-title-font-size: emCalc(17);
+
+/* Style the top bar dropdown elements */
+
+$topbar-dropdown-link-color: #fff;
+
+$topbar-dropdown-toggle-size: 5px;
+$topbar-dropdown-toggle-color: #fff;
+$topbar-dropdown-toggle-alpha: 0.5;
+
+/* Set the link colors and styles for top-level nav */
+$topbar-link-color: #fff;
+$topbar-link-color-hover: #fff;
+$topbar-link-color-active: #fff;
+$topbar-link-weight: bold;
+$topbar-link-font-size: emCalc(13);
+$topbar-link-hover-lightness: -30%; /* Darken by 30% */
+$topbar-link-bg-hover: darken($topbar-bg, 3%);
+$topbar-link-bg-active: darken($topbar-bg, 3%);
+
+$topbar-dropdown-label-color: #555;
+$topbar-dropdown-label-text-transform: uppercase;
+$topbar-dropdown-label-font-weight: bold;
+$topbar-dropdown-label-font-size: emCalc(10);
+
+/* Top menu icon styles */
+$topbar-menu-link-transform: uppercase;
+$topbar-menu-link-font-size: emCalc(13);
+$topbar-menu-link-weight: bold;
+$topbar-menu-link-color: #fff;
+$topbar-menu-icon-color: #fff;
+$topbar-menu-link-color-toggled: #888;
+$topbar-menu-icon-color-toggled: #888;
+
+/* Transitions and breakpoint styles */
+$topbar-transition-speed: 300ms;
+$topbar-breakpoint: emCalc(940); /* Change to 9999px for always mobile layout */
+$topbar-media-query: "only screen and (min-width: #{$topbar-breakpoint})";
+
+/* Divider Styles */
+$topbar-divider-border-bottom: solid 1px lighten($topbar-bg, 10%);
+$topbar-divider-border-top: solid 1px darken($topbar-bg, 10%);
