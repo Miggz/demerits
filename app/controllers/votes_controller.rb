@@ -1,4 +1,4 @@
-class ActsAsVotable::VotesController < ApplicationController
+class VotesController < ApplicationController
   before_filter :set_user
   load_polymorphic_from_url :votable
 
@@ -32,7 +32,7 @@ class ActsAsVotable::VotesController < ApplicationController
 
   def handle_vote(votable, args)
     return false unless args.include?(:flag)
-    votable.vote voter: @user, vote: args[:flag]
+    @user.vote votable, flag: !!args[:flag]
   end
 
   private

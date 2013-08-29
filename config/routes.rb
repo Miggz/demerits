@@ -6,8 +6,7 @@ Demerits::Application.routes.draw do
   resources :users
 
   concern :votable do
-    resource :vote, only: %i[show create update destroy],
-             module: 'acts_as_votable'
+    resource :vote, only: %i[show create update destroy]
   end
 
   resources :victims, concerns: :votable
