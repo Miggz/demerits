@@ -28,7 +28,7 @@
 //= require foundation/foundation.interchange
 //= require foundation/foundation.placeholder
 //= require foundation/foundation.abide
-//= require turbolinks
+//= require angular
 
 //= require lib/fast_click
 //= require layout
