@@ -3,7 +3,7 @@
 //= require foundation/foundation.topbar
 
 //= require angular
-//= require lib/angular-resource
+//= require angular-resource
 //= require main
 
 // require foundation/foundation.alerts
