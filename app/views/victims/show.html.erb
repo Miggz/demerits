@@ -1,0 +1,24 @@
+<div id="notice">
+  <%= notice %>
+</div>
+<div ng-controller="DemeritCtrl">
+  <div class="demerit-target">
+    <div class="target-image" style="background-image: url('<%= @victim.image %>')"></div>
+    <div class="target-overlay" ng-click="addDemerit()">
+      <%= image_tag 'down-arrow.svg', height: '100%', width: '100%' %>
+    </div>
+    <%= image_tag 'up-circle.svg', class: 'remove-demerit',
+                  'ng-click' => 'removeDemerit()' %>
+  </div>
+
+
+  <div class="footer">
+    <div class="demerit-count-heading">
+      <%= image_tag 'down-circle.svg', height: 16, width: 16 %>
+      de<strong>MERIT Count:</strong>
+    </div>
+    <div class="demerit-count">
+      {{ demerit_count }}
+    </div>
+  </div>
+</div>
