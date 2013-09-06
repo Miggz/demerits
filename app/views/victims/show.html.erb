@@ -8,8 +8,9 @@
     <div class="target-overlay" ng-click="addDemerit()">
       <%= image_tag 'down-arrow.svg', height: '100%', width: '100%' %>
     </div>
-    <%= image_tag 'up-circle.svg', class: 'remove-demerit',
-                  'ng-click' => 'removeDemerit()' %>
+    <div ng-click="removeDemerit()">
+      <%= image_tag 'up-circle.svg', class: 'remove-demerit' %>
+    </div>
   </div>
 
 
