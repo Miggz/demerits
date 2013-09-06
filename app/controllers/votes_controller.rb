@@ -1,5 +1,6 @@
 class VotesController < ApplicationController
   before_filter :set_user
+  skip_before_action :verify_authenticity_token
   load_polymorphic_from_url :votable
 
   # GET /votable/:votable_id/vote
@@ -32,7 +33,7 @@ class VotesController < ApplicationController
 
   def handle_vote(votable, args)
     return false unless args.include?(:flag)
-    @user.vote votable, flag: !!args[:flag]
+    @user.vote votable, flag: args[:flag].to_bool
   end
 
   private

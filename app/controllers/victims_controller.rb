@@ -10,7 +10,6 @@ class VictimsController < ApplicationController
   # GET /victims/1
   # GET /victims/1.json
   def show
-    @victim = Victim.find params[:id]
   end
 
   # GET /victims/new

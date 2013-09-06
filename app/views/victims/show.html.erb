@@ -2,6 +2,7 @@
   <%= notice %>
 </div>
 <div ng-controller="DemeritCtrl">
+  <h1>{{ victim.name }}</h1>
   <div class="demerit-target">
     <div class="target-image" style="background-image: url('<%= @victim.image %>')"></div>
     <div class="target-overlay" ng-click="addDemerit()">
@@ -18,7 +19,7 @@
       de<strong>MERIT Count:</strong>
     </div>
     <div class="demerit-count">
-      {{ demerit_count }}
+      {{ victim.tally }}
     </div>
   </div>
 </div>

@@ -1,12 +1,16 @@
-function DemeritCtrl ($scope) {
-  $scope.demerit_count = 1;
+angular.module('demerits', ['ngResource'])
+  .factory('Victim', function ($resource, $window) {
+    return $resource($window.location.pathname + '/vote.json');
+  });
+
+function DemeritCtrl ($scope, Victim) {
+  $scope.victim = Victim.get();
 
   $scope.addDemerit = function () {
-    console.log('add-Demerit');
-    $scope.demerit_count = $scope.demerit_count + 1;
+    $scope.victim.$save({flag: true});
   };
 
   $scope.removeDemerit = function () {
-    $scope.demerit_count = $scope.demerit_count - 1;
+    $scope.victim.$save({flag: false});
   };
 }
