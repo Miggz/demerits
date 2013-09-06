@@ -2,7 +2,9 @@
   <%= notice %>
 </div>
 <div ng-controller="DemeritCtrl">
-  <h1 ng-bind='victim.name'></h1>
+  <div class="z-top">
+    <h1 class="large-heading victim-title" ng-bind='victim.name'></h1>
+  </div>
   <div class="demerit-target">
     <div class="target-image" style="background-image: url('<%= @victim.image %>')"></div>
     <div class="target-overlay" ng-click="addDemerit()">

@@ -115,3 +115,13 @@
   line-height: 36px;
   color: rgba(#fff, .95);
 }
+
+.victim-title {
+  text-align: center;
+}
+
+.z-top {
+  position: relative;
+  display: block;
+  z-index: 100000;
+}
