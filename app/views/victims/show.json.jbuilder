@@ -1,1 +1,1 @@
-json.extract! @victim, :name, :email, :created_at, :updated_at
+json.extract! @victim, :id, :name, :tally

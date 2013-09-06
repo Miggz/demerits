@@ -1,7 +1,6 @@
 .demerit-target {
   border-radius: 100%;
   border: solid 20px rgba(255,255,255,.4);
-  overflow: hidden;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -43,10 +42,6 @@
   background-repeat: no-repeat;
 }
 
-//.header-row {
-//  padding-top: 15px;
-//}
-
 .demerit-target {
   @include demeritSize(160px);
 
@@ -64,7 +59,26 @@
   }
 }
 
+.demerit-target {
+  .remove-demerit {
+    height: 32px;
+    width: 32px;
+    position: absolute;
+    right: -32px;
+    bottom: -32px;
+    opacity: .25;
+    @include single-transition(all, $speed:300ms, $ease:ease-out);
+    cursor: pointer;
 
+    &:hover {
+      opacity: .5;
+    }
+
+    &:active {
+      opacity: .75;
+    }
+  }
+}
 
 .footer {
   position: absolute;

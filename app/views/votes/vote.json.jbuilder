@@ -1,1 +1,1 @@
-json.(@votable, :id)
+json.(@votable, :name, :tally)
